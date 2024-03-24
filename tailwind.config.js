@@ -24,6 +24,8 @@ export default {
         "grad-2": "#9873FF  ",
         "grad-3": "#7E90FE0D ",
         "grad-4": "#9873FF0D",
+        facebook: "#337FFF",
+        twitter: "#33CCFF",
 
         "white-70": "#FFFFFFB2",
         "white-40": "#FFFFFF66",

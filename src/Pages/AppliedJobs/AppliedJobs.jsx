@@ -2,8 +2,12 @@
 
 const AppliedJobs = () => {
   return (
-    <div>AppliedJobs</div>
-  )
+    <section className="container mx-auto min-h-[calc(100vh-653px-8rem)]">
+      <div>
+        
+      </div>
+    </section>
+  );
 }
 
 export default AppliedJobs

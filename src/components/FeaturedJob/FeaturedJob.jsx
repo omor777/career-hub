@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import ButtonOutline from "../ButtonOutline/ButtonOutline";
 
 const FeaturedJob = ({ job }) => {
   const { image, id, company_name, job_title, location, salary_range } = job;
-  console.log(job);
+//   console.log(job);
   return (
     <div className="border border-dark-6 rounded-lg p-10">
       <img src={image} />
@@ -18,7 +19,9 @@ const FeaturedJob = ({ job }) => {
         <p>Salary: {salary_range}</p>
       </div>
       <div className="mt-6">
-        <Button>View Details</Button>
+        <Link to={`/job-details/${id}`}>
+          <Button>View Details</Button>
+        </Link>
       </div>
     </div>
   );
