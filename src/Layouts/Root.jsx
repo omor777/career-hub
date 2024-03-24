@@ -3,7 +3,7 @@ import Navbar from "../components/Shared/Navbar/Navbar";
 
 const Root = () => {
   return (
-    <div className="bg-bg-grad">
+    <div className="">
       <Navbar />
       <Outlet />
     </div>
