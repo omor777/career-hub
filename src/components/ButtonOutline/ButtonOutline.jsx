@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const ButtonOutline = ({ children }) => {
   return (
     <div>
@@ -6,6 +7,10 @@ const ButtonOutline = ({ children }) => {
       </button>
     </div>
   );
+};
+
+ButtonOutline.propTypes = {
+  children: PropTypes.string,
 };
 
 export default ButtonOutline;

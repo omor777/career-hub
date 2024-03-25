@@ -1,4 +1,6 @@
+import PropTypes from "prop-types";
 const Button = ({ children = "Star Applying", full }) => {
+
   return (
     <div>
       <button
@@ -10,6 +12,11 @@ const Button = ({ children = "Star Applying", full }) => {
       </button>
     </div>
   );
+};
+
+Button.propTypes = {
+  children: PropTypes.string,
+  full: PropTypes.bool,
 };
 
 export default Button;

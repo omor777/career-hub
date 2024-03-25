@@ -7,8 +7,10 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import { getDataFromLocalStorage } from "../../Utils/localStorage";
+
 import useJobsData from "../../Hooks/useJobsData";
+import PropTypes from "prop-types";
+
 const Statistics = () => {
   const [remoteJobs, setRemoteJobs] = useState([]);
   const [fullTimeJobs, setFullTimeJobs] = useState([]);
@@ -102,6 +104,11 @@ const Statistics = () => {
       </div>
     </div>
   );
+};
+
+Statistics.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
 };
 
 export default Statistics;

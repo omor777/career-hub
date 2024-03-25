@@ -2,6 +2,7 @@ import ButtonOutline from "../ButtonOutline/ButtonOutline";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineDollar } from "react-icons/ai";
 import Button from "../Button/Button";
+import PropTypes from "prop-types";
 
 const AppliedJob = ({ job }) => {
   const { image, company_name, location, job_title, salary_range } = job;
@@ -35,6 +36,10 @@ const AppliedJob = ({ job }) => {
       </div>
     </div>
   );
+};
+
+AppliedJob.propTypes = {
+  job: PropTypes.object.isRequired,
 };
 
 export default AppliedJob;
