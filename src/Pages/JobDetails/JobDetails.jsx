@@ -6,6 +6,7 @@ import { BsTelephone } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoLocationOutline } from "react-icons/io5";
 import Button from "../../components/Button/Button";
+import { saveDataToLocalStorage } from "../../Utils/localStorage";
 
 const JobDetails = () => {
   const [jobData, setJobData] = useState({});
@@ -25,8 +26,14 @@ const JobDetails = () => {
     phone_number,
     email,
     address,
+    job_title,
   } = jobData;
-  console.log(jobData);
+
+  
+  const handleAddJob = () => {
+    saveDataToLocalStorage(id);
+  };
+
   return (
     <section className=" container mx-auto min-h-[calc(100vh-653px-8rem)] mt-32">
       <div className="grid grid-cols-12 gap-6">
@@ -66,8 +73,7 @@ const JobDetails = () => {
               </p>
               <p className="flex flex-wrap items-center mt-4">
                 <IoCalendar className="mr-2 text-2xl text-indigo-400" />
-                <b className="mr-1">Job Title:</b> <span>{salary_range}</span>{" "}
-                (Per-Month)
+                <b className="mr-1">Job Title:</b> <span>{job_title}</span>
               </p>
             </div>
             <h3 className="text-xl font-extrabold text-dark-1 mt-8">
@@ -89,7 +95,7 @@ const JobDetails = () => {
               </p>
             </div>
           </div>
-          <div className="mt-6 w-full">
+          <div onClick={handleAddJob} className="mt-6 w-full">
             <Button full={true} className="btn bg-btn-grad">
               Apply Now
             </Button>

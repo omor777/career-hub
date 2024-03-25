@@ -1,8 +1,10 @@
-const Button = ({ children = "Star Applying",full }) => {
+const Button = ({ children = "Star Applying", full }) => {
   return (
     <div>
       <button
-        className={`btn btn-lg bg-btn-grad text-white font-extrabold text-xl ${full && 'w-full'}`}
+        className={`btn lg:btn-lg bg-btn-grad text-white lg:font-extrabold font-semibold lg:text-xl ${
+          full && "w-full"
+        }`}
       >
         {children}
       </button>
